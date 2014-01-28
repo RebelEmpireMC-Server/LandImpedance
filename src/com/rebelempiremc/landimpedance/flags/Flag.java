@@ -1,5 +1,7 @@
 package com.rebelempiremc.landimpedance.flags;
 
-public abstract class Flag {
+import org.bukkit.entity.Player;
 
+public abstract class Flag {
+    public abstract void execute(Player player);
 }
