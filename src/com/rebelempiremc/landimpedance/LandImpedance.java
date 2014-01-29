@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class LandImpedance extends JavaPlugin {
     public void onEnable(){
         this.getCommand("landimpedance").setExecutor(new LandImpedanceCommand());
+        this.getCommand("li").setExecutor(new LandImpedanceCommand());
         this.getCommand("land").setExecutor(new LandCommand());
     }
 }
