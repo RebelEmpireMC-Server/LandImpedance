@@ -1,5 +1,7 @@
 package com.rebelempiremc.landimpedance.api;
 
+import org.bukkit.Location;
+
 public class BlockLocation {
 
     private int x;
@@ -49,5 +51,17 @@ public class BlockLocation {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static BlockLocation fromBukkitLocation(Location location){
+        return new BlockLocation(location.getBlockX(), location.getBlockY(), location.getBlockZ());
+    }
+
+    public Quadrant getQuadrant(){
+        if (x >= 0 && y >= 0) return Quadrant.Q1; //both are positive
+        else if (x <= 0 && y >= 0) return Quadrant.Q2; //x negative, y postive
+        else if (x <= 0 && y <= 0) return Quadrant.Q3;
+        else if (x >= 0 && y <= 0) return Quadrant.Q4; //x positive, y negative
+        return Quadrant.Q4; //should technically never happen.... will leave this as Q4 for convenience
     }
 }
