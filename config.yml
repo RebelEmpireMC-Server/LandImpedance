@@ -1,0 +1,33 @@
+Protection:
+  X: 16
+  Y: idk #0-256
+  Z: 16
+  Block: Sponge #ID or Item, your choice
+  Durability: #Just do the Max/# you enter to get the amount of breaks. Round up.
+    PickAxe:
+      DurabilityWood: 9 #Takes away # of durability per break. Max: 59 = 7 blocks broken
+      DurabilityStone: 15 #Takes away # of durability per break. Max: 131 = 9 blocks broken
+      DurabilityIron: 20 #Takes away # of durability per break. Max: 250 = 13 blocks broken
+      DurabilityGold: 3 #Takes away # of durability per break. Max: 32 = 11 blocks broken
+      DurabilityDiamond: 40 #Takes away # of durability per break. Max: 1561 = 40 blocks broken
+    Shovel:
+      DurabilityWood: 9 #Takes away # of durability per break. Max: 59 = 7 blocks broken
+      DurabilityStone: 15 #Takes away # of durability per break. Max: 131 = 9 blocks broken
+      DurabilityIron: 20 #Takes away # of durability per break. Max: 250 = 13 blocks broken
+      DurabilityGold: 3 #Takes away # of durability per break. Max: 32 = 11 blocks broken
+      DurabilityDiamond: 40 #Takes away # of durability per break. Max: 1561 = 40 blocks broken
+    Sword:
+      DurabilityWood: 9 #Takes away # of durability per break. Max: 59 = 7 blocks broken
+      DurabilityStone: 15 #Takes away # of durability per break. Max: 131 = 9 blocks broken
+      DurabilityIron: 20 #Takes away # of durability per break. Max: 250 = 13 blocks broken
+      DurabilityGold: 3 #Takes away # of durability per break. Max: 32 = 11 blocks broken
+      DurabilityDiamond: 40 #Takes away # of durability per break. Max: 1561 = 40 blocks broken
+    Axe:
+      DurabilityWood: 9 #Takes away # of durability per break. Max: 59 = 7 blocks broken
+      DurabilityStone: 15 #Takes away # of durability per break. Max: 131 = 9 blocks broken
+      DurabilityIron: 20 #Takes away # of durability per break. Max: 250 = 13 blocks broken
+      DurabilityGold: 3 #Takes away # of durability per break. Max: 32 = 11 blocks broken
+      DurabilityDiamond: 40 #Takes away # of durability per break. Max: 1561 = 40 blocks broken
+  Fatigue: #Slow mining
+    enabled: true
+    Level: 1 #Either 1-3. Anything higher and they can't break any blocks in the area
