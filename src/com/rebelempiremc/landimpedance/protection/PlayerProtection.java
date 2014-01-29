@@ -10,12 +10,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerProtection {
+
+    private String owner;
     private Cuboid cuboid;
     private List<Flag> flags;
 
-    public PlayerProtection(BlockLocation pos1, BlockLocation pos2){
+    public PlayerProtection(String owner, BlockLocation pos1, BlockLocation pos2){
+        this.owner = owner;
         cuboid = new Cuboid(pos1,pos2);
         flags = new ArrayList<Flag>();
+    }
+
+    public String getOwner(){
+        return owner;
+    }
+
+    public void setOwner(String string){
+        this.owner = string;
     }
 
     public boolean isInProtection(BlockLocation location){
@@ -32,5 +43,9 @@ public class PlayerProtection {
 
     public List<Flag> getFlags(){
         return flags;
+    }
+
+    public String serialize(){
+        //TODO: finish
     }
 }
