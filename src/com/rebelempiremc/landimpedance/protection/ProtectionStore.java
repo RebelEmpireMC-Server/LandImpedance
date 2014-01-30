@@ -16,7 +16,7 @@ public class ProtectionStore {
 
     public PlayerProtection getInProtection(Player player){
         if (!protectionCache.containsKey(player.getName())){
-            this.searchForInProtection(player);
+            return this.searchForInProtection(player);
         }
         else{
             //check if protection in cache is still valid
@@ -25,10 +25,9 @@ public class ProtectionStore {
                 return cachedProtection;
             }
             else{
-                this.searchForInProtection(player);
+                return this.searchForInProtection(player);
             }
         }
-        return null;
     }
 
     public List<PlayerProtection> getProtections(Player player){
