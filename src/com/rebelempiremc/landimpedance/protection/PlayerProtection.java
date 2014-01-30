@@ -47,5 +47,6 @@ public class PlayerProtection {
 
     public String serialize(){
         //TODO: finish
+        return null;
     }
 }

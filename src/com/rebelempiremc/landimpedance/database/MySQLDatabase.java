@@ -1,10 +1,12 @@
 package com.rebelempiremc.landimpedance.database;
 
+import com.rebelempiremc.landimpedance.api.Quadrant;
 import com.rebelempiremc.landimpedance.protection.PlayerProtection;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class MySQLDatabase {
 
@@ -16,7 +18,7 @@ public class MySQLDatabase {
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
 
-    private List<PlayerProtection> protections = new ArrayList<PlayerProtection>();
+    public volatile List<PlayerProtection> protections = new ArrayList<PlayerProtection>();
 
     public void read() throws Exception{
         Class.forName("com.mysql.jdbc.Driver");
@@ -29,7 +31,11 @@ public class MySQLDatabase {
 
     public void writeToProtections(ResultSet set) throws Exception{
         while (set.next()){
-            
+
         }
+    }
+
+    public void writeToMySQL(Map<Quadrant,List<PlayerProtection>> map){
+
     }
 }

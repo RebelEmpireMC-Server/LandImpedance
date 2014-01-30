@@ -1,6 +1,6 @@
 Protection:
   X: 16
-  Y: idk #0-256
+  Y: maxVertical
   Z: 16
   Block: Sponge #ID or Item, your choice
   Durability: #Just do the Max/# you enter to get the amount of breaks. Round up.
