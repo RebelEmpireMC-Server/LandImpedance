@@ -4,6 +4,7 @@ package com.rebelempiremc.landimpedance.protection;
 import com.rebelempiremc.landimpedance.api.BlockLocation;
 import com.rebelempiremc.landimpedance.api.Cuboid;
 import com.rebelempiremc.landimpedance.flags.Flag;
+import com.rebelempiremc.landimpedance.flags.FlagList;
 import org.bukkit.Location;
 
 import java.util.ArrayList;
@@ -13,12 +14,12 @@ public class PlayerProtection {
 
     private String owner;
     private Cuboid cuboid;
-    private List<Flag> flags;
+    private FlagList flags;
 
     public PlayerProtection(String owner, BlockLocation pos1, BlockLocation pos2){
         this.owner = owner;
         cuboid = new Cuboid(pos1,pos2);
-        flags = new ArrayList<Flag>();
+        flags = new FlagList();
     }
 
     public String getOwner(){
@@ -37,11 +38,15 @@ public class PlayerProtection {
         return x && y && z;
     }
 
-    public boolean isFlag(Flag flag){
-        return flags.contains(flag);
+    public boolean isFlag(Class<? extends Flag> flag){
+        return flags.isFlag(flag);
     }
 
     public List<Flag> getFlags(){
+        return flags.getFlags();
+    }
+
+    public FlagList getFlagList(){
         return flags;
     }
 
@@ -49,4 +54,5 @@ public class PlayerProtection {
         //TODO: finish
         return null;
     }
+
 }

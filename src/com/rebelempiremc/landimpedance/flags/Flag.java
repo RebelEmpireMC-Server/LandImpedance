@@ -1,7 +1,6 @@
 package com.rebelempiremc.landimpedance.flags;
 
-import org.bukkit.entity.Player;
+import com.rebelempiremc.landimpedance.events.ProtectionEvent;
+import org.bukkit.event.Listener;
 
-public abstract class Flag {
-    public abstract void execute(Player player);
-}
+public abstract class Flag {}
